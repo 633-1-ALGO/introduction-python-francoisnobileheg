@@ -3,6 +3,16 @@
 #                                             1  1  2  3  4  5  6  7  8  9  10
 #                                             2  2  4  6  8  10 12 14 16 18 20
 #                                             . .  .  .  .  .  .  .  .  .  .
-# Indication :   L'alignement rectiligne n'est pas une contrainte, tant que la table est visible ligne par ligne c'est ok.
+# Indication : L'alignement rectiligne n'est pas une contrainte, tant que la table est visible ligne par ligne c'est ok.
 #               Si vous êtes perfectionnistes faites vous plaisir.
 liste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+table = [[len(liste)], len(liste)]
+
+table[0] = liste
+
+for i in range(0, len(liste)-1):
+    for j in range(0, len(liste)-1):
+        table[i][j] = liste[i] * liste[j]
+
+print(table)

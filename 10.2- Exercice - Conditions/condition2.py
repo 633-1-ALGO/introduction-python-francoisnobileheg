@@ -7,3 +7,16 @@
 #                       Sinon, elle est bissextile.
 #
 # Résultat attendu : Un message affichant "Année bissextile" ou "Année non bissextile"
+
+annee = input("Entrer une année")
+
+if annee % 4 == 0:
+    if annee % 100 == 0:
+        if annee % 400 == 0:
+            print(annee, " est bissextile")
+        else:
+            print(annee, " n'est pas bissextile")
+    else:
+        print(annee, " n'est pas bissextile")
+else:
+    print(annee, " n'est pas bissextile")

@@ -3,3 +3,19 @@
 # Résultat attendu : Le tableau B trié
 
 B = [2, 6, 8, 5, 4, 12, 98, 34, 1]
+
+B = sorted(B)
+
+print(B)
+
+B = [2, 6, 8, 5, 4, 12, 98, 34, 1]
+
+for i in range(0, len(B) - 1):
+    for j in range(0, len(B) - 1):
+        if B[i] < B[j]:
+            print(B[i])
+            print(B[j])
+            B.insert(j-1, B[i])
+            B.pop(i)
+
+print(B)

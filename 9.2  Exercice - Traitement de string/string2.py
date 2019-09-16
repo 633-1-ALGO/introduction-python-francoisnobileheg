@@ -7,7 +7,8 @@ textsplit = texte.split()
 nb = 0
 
 for i in textsplit:
-    if i.find("exemple"):
+    if i.find("exemple") >= 0:
+        print(i)
         nb += 1
 
 print("Nombres d'occurence du mot exemple : ", nb)
